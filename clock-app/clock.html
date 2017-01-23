@@ -1,0 +1,22 @@
+<html ng-app="mymodule">
+    <head>
+        <script src="angular.js"></script>
+    </head>
+    <body ng-controller="ctrl">
+        <h1>Clock App</h1>
+        <p>The current time is: {{x}}</p>
+   
+
+<script>
+
+var module = angular.module("mymodule",[]);
+module.controller("ctrl", Main);
+function Main($scope) {
+    $scope.x= new Date();
+}
+
+</script>
+
+ </body>
+
+</html>

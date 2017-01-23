@@ -2,7 +2,7 @@
 <head>
     <script src="angular.js"></script>
 </head>
-    <body ng-init="hourofday=19">
+    <body>
 
         <div ng-controller="MainCtrl">
             <h1>hello angular1</h1>
@@ -17,7 +17,8 @@
         var module = angular.module("myApp",[]);
         module.controller("MainCtrl",Main);
 
-        function Main() {
+        function Main($scope) {            
+            $scope.hourofday=8;
             console.log("main function called");
         }
 
