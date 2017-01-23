@@ -1,9 +1,32 @@
-<html ng-app>
+<html ng-app="myApp">
 <head>
     <script src="angular.js"></script>
 </head>
-    <body>
-        <h1>hello angular1</h1>
-        <p ng-if="false"> good mornings</p>
+    <body ng-init="hourofday=19">
+
+        <div ng-controller="MainCtrl">
+            <h1>hello angular1</h1>
+            <p ng-if="hourofday < 12"> good morning</p>
+            <p ng-if="hourofday > 5"> good evening</p>
+            <!--<p>the hour of the day is:<span ng-bind="hourofday"></span></p>-->
+            <p>the hour of the day is: {{hourofday}}</p>  
+         </div>  
+        
+    <script>
+
+        var module = angular.module("myApp",[]);
+        module.controller("MainCtrl",Main);
+
+        function Main() {
+            console.log("main function called");
+        }
+
+
+    </script>
+    
+    
+    
+    
     </body>
+
 </html>
